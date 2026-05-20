@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)file:///C:/Users/A%20D%20V%20A%20N%20C%20E/tarea%201.html -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Combinaciones</title>
+
+<style>
+
+body{
+font-family:Arial;
+padding:30px;
+}
+
+p{
+font-size:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Combinaciones</h1>
+
+<p id="datos">n1 (Cantidad total del grupo 1): 12<br><br>r1 (Elementos elegidos del grupo 1): 11<br><br>n2 (Cantidad total del grupo 2): 11<br><br>r2 (Elementos elegidos del grupo 2): 14</p>
+
+<p id="resultado"><br>Total de combinaciones: 0.005494505494505494</p>
+
+<script>
+
+function fact(n){
+
+let f=1;
+
+for(let i=1;i<=n;i++){
+
+f=f*i;
+
+}
+
+return f;
+
+}
+
+
+
+let n1=
+Number(prompt("Ingrese el valor de n1"));
+
+let r1=
+Number(prompt("Ingrese el valor de r1"));
+
+let n2=
+Number(prompt("Ingrese el valor de n2"));
+
+let r2=
+Number(prompt("Ingrese el valor de r2"));
+
+let c1=
+
+fact(n1)/(fact(r1)*fact(n1-r1));
+
+let c2=
+
+fact(n2)/(fact(r2)*fact(n2-r2));
+
+let total=
+c1*c2;
+
+document.getElementById("datos").innerHTML=
+
+"n1 (Cantidad total del grupo 1): "
+
++
+
+n1
+
++
+
+"<br><br>r1 (Elementos elegidos del grupo 1): "
+
++
+
+r1
+
++
+
+"<br><br>n2 (Cantidad total del grupo 2): "
+
++
+
+n2
+
++
+
+"<br><br>r2 (Elementos elegidos del grupo 2): "
+
++
+
+r2;
+
+document.getElementById("resultado").innerHTML=
+
+"<br>Total de combinaciones: "
+
++
+
+total;
+
+</script>
+
+
+</body></html>

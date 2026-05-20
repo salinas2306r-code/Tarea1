@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)file:///C:/Users/A%20D%20V%20A%20N%20C%20E/Untitle7d-1.html -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Transferencia de calor</title>
+<style>
+body{
+font-family:Arial;
+padding:30px;
+}
+p{
+font-size:20px;
+}
+</style>
+</head>
+<body>
+<h1>Transferencia de calor</h1>
+<p id="datos">T0 (Temperatura inicial): 140<br><br>Ts (Temperatura ambiente): 152<br><br>k (Constante): 144<br><br>t (Tiempo): 111</p>
+<p id="resultado"><br>Temperatura final: 152</p>
+<script>
+let T0=
+Number(prompt("Ingrese la temperatura inicial"));
+let Ts=
+Number(prompt("Ingrese la temperatura ambiente"));
+let k=
+Number(prompt("Ingrese la constante"));
+let t=
+Number(prompt("Ingrese el tiempo"));
+let r=
+Ts+
+(T0-Ts)
+*
+Math.exp(-k*t);
+r=
+Math.round(r);
+document.getElementById("datos").innerHTML=
+"T0 (Temperatura inicial): "
++
+T0
++
+"<br><br>Ts (Temperatura ambiente): "
++
+Ts
++
+"<br><br>k (Constante): "
++
+k
++
+"<br><br>t (Tiempo): "
++
+t;
+document.getElementById("resultado").innerHTML=
+"<br>Temperatura final: "
++
+r;
+</script>
+
+</body></html>
